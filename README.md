@@ -1,8 +1,10 @@
 # VoiceTranscriber
 
-Personal OBS recording transcription pipeline for generating raw transcripts and AI summaries into an Obsidian vault.
+Personal OBS recording transcription pipeline that turns recordings into raw transcripts and AI summaries in an Obsidian vault. I built it as an alternative to commercial transcription services, so voice recordings stay private, and secondarily to avoid another monthly subscription.
 
-The watcher runs continuously, detects new OBS `.mkv` recordings, waits until each video file is stable, sends it through local faster-whisper transcription, and optionally calls the OpenAI API to create a structured summary note.
+The watcher runs continuously, detects new OBS .mkv recordings, waits until each video file is stable, sends it through local faster-whisper transcription, and optionally calls the OpenAI API to create a structured summary note.
+
+Audio and video never leave the machine, since transcription runs locally through faster-whisper. Summarization is optional and is the only step that reaches an API, sending the transcript text rather than the recording.
 
 ## Scripts
 
