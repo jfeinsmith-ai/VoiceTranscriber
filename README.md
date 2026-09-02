@@ -6,6 +6,8 @@ The watcher runs continuously, detects new OBS .mkv recordings, waits until each
 
 Audio and video never leave the machine, since transcription runs locally through faster-whisper. Summarization is optional and is the only step that reaches an API, sending the transcript text rather than the recording.
 
+Speaker diarization is deliberately out of scope due, since it does not run well within my local compute limits given lack of a GPU.
+
 ## Scripts
 
 | File | Purpose |
